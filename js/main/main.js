@@ -4,9 +4,9 @@ const youthText = "청년일자리 걱정없는 사회,<br /> CMYK재단이 만�
 
 const filterPath = (color, target) => {
   if (color === "white") {
-    return `/assets/image/ic_thumb${target}_w.svg`;
+    return `./assets/image/ic_thumb${target}_w.svg`;
   } else {
-    return `/assets/image/ic_thumb${target}.svg`;
+    return `./assets/image/ic_thumb${target}.svg`;
   }
 };
 
