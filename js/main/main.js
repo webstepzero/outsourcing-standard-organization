@@ -78,3 +78,12 @@ const backgroundSwiper = new Swiper(".background-slide", {
     crossFade: true,
   },
 });
+
+console.log(window.innerWidth);
+
+if (window.innerWidth < 1280) {
+  document.querySelector("div.wrap").remove();
+  document.querySelector("body").innerHTML =
+    "모바일 작업이 진행중입니다. 아직보지마세연";
+  alert("현재 모바일 작업이 아직 진행중입니다. ^^;");
+}
