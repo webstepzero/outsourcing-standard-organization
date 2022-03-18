@@ -1,0 +1,6 @@
+/* _function */
+$base-size: 16;
+
+@function torem($target, $context: $base-size) {
+  @return ($target / $context) * 1rem;
+}

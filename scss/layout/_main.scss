@@ -1,0 +1,300 @@
+/* _main */
+
+body {
+  min-height: 1000px;
+}
+
+.warning {
+  background-color: #e6e6e6;
+  .inner {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    height: 50px;
+    .warning-text {
+      font-weight: 500;
+    }
+    &::before {
+      content: "";
+      display: block;
+      width: 28px;
+      height: 28px;
+
+      background: url("../../assets/image/ic_warning.svg") center center
+        no-repeat;
+    }
+  }
+}
+
+// header
+.header {
+  .inner {
+    display: flex;
+    align-items: center;
+    gap: 140px;
+    height: 80px;
+  }
+  .nav-list {
+    display: flex;
+    gap: 50px;
+  }
+
+  .nav-item {
+    a {
+      font-weight: 500;
+    }
+  }
+}
+// main
+
+.theme-section {
+  position: relative;
+}
+
+.background-slide {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  img {
+    object-fit: cover;
+  }
+}
+
+.contents {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 72px;
+  position: relative;
+  z-index: 10;
+
+  color: #fff;
+  .inner {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.explain-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .title {
+    position: relative;
+    font-size: torem(32);
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 14rem;
+      transform: translateY(-50%);
+      width: 230px;
+      height: 1px;
+      background-color: #fff;
+    }
+  }
+
+  .small-slogan {
+    font-family: "Gmarket Sans";
+    font-weight: 500;
+    font-size: torem(18);
+    letter-spacing: -0.36px;
+  }
+}
+
+.explain-slogan {
+  padding-top: 72px;
+  .big-slogan {
+    font-family: "Gmarket Sans";
+    font-size: torem(48);
+    font-weight: 500;
+    line-height: torem(68);
+    letter-spacing: -0.96px;
+
+    &.active {
+      animation-name: fade;
+      animation-duration: 0.5s;
+      animation-timing-function: ease-in-out;
+    }
+  }
+}
+
+.happy-industry_on {
+  padding-top: 34px;
+
+  a {
+    position: relative;
+    font-family: "Gmarket Sans";
+    font-size: torem(24);
+    font-weight: 500;
+    letter-spacing: -0.48px;
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 49%;
+      right: -34px;
+      width: 28px;
+      height: 28px;
+
+      transform: translateY(-51%);
+      background: url("../../assets/image/ic_go.png") center center/contain
+        no-repeat;
+    }
+
+    &.active {
+      animation-name: fade;
+      animation-duration: 0.5s;
+      animation-timing-function: ease-in-out;
+    }
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.information-list {
+  display: flex;
+  gap: 10px;
+  padding-top: 204px;
+}
+
+.information-item {
+  a {
+    display: inline-block;
+    border-radius: 4px;
+    padding: 23px 88px 23px 24px;
+    font-family: "Gmarket Sans";
+    font-size: torem(18);
+    font-weight: 500;
+    letter-spacing: -0.36px;
+  }
+  &.introduce {
+    a {
+      background-color: #4b4b4b;
+    }
+  }
+
+  &.news {
+    a {
+      background-color: rgba(136, 136, 136, 0.8);
+    }
+  }
+}
+
+.background-slide {
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, #000000 0%, #244e28 100%);
+    opacity: 0.41;
+  }
+  .swiper-slide {
+    min-height: 730px;
+  }
+  .happy-industry {
+    background: url("../../assets/image/img_hero_1.png") center center/cover
+      no-repeat;
+  }
+
+  .youth-industry {
+    background: url("../../assets/image/img_hero_2.png") center center/cover
+      no-repeat;
+  }
+}
+
+.contents-explain {
+  width: 58.75%;
+}
+
+.contents-side {
+  width: 32.6563%;
+  .swiper-pagination {
+    display: flex;
+    gap: 10px;
+    position: static;
+    padding-bottom: 40px;
+  }
+
+  .swiper-pagination-bullet {
+    display: flex;
+    justify-content: space-between;
+
+    width: 50%;
+    height: 120px;
+    padding: 14px 15px 24px 24px;
+    border-radius: 8px 8px 40px 8px;
+
+    color: #0a5d44;
+    background-color: rgba(255, 255, 255, 0.8);
+    opacity: 1;
+
+    &-active {
+      background-color: rgba(21, 151, 111, 0.95);
+      color: #fff;
+    }
+    &.swiper-pagination-bullet.industry {
+      margin: 0;
+    }
+  }
+  .industry-text {
+    align-self: flex-end;
+    font-family: "Gmarket Sans";
+    font-size: torem(20);
+    font-weight: 500;
+    letter-spacing: -0.4px;
+  }
+}
+
+.side-letter {
+  padding: 32px 28px;
+  border: 1px solid #ffffff;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.92);
+  .letter-title {
+    color: #000;
+    font-family: "Gmarket Sans";
+    font-size: torem(18);
+    font-weight: 700;
+    letter-spacing: -0.36px;
+  }
+
+  .letter-discription {
+    padding: 14px 0 11px;
+    color: #565656;
+    font-size: torem(14);
+    line-height: torem(22);
+    letter-spacing: -0.28px;
+  }
+
+  .letter-detail {
+    display: inline-block;
+    padding: 8px 20px;
+    border: 1px solid #9f9f9f;
+    border-radius: 4px;
+    margin-bottom: 25px;
+
+    color: #565656;
+    font-size: torem(14);
+    letter-spacing: -0.28px;
+  }
+}
+
+// footer

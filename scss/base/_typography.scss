@@ -1,0 +1,57 @@
+@font-face {
+  font-family: "Noto Sans KR";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url("../../fonts/notosansKr/NotoSansKR-Regular.otf");
+  src: local(""),
+    url("../../fonts/notosansKr/NotoSansKR-Regular.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Noto Sans KR";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 500;
+  src: url("../../fonts/notosansKr/NotoSansKR-Medium.otf"); /* IE9 Compat Modes */
+  src: local(""),
+    url("../../fonts/notosansKr/NotoSansKR-Medium.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Noto Sans KR";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 700;
+  src: url("../../fonts/notosansKr/NotoSansKR-Bold.otf");
+  src: local(""),
+    url("../../fonts/notosansKr/NotoSansKR-Bold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Gmarket Sans";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 500;
+  src: url("../../fonts/gmarketsans/GmarketSansMedium.otf");
+  src: local(""),
+    url("../../fonts/gmarketsans/GmarketSansMedium.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Gmarket Sans";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 700;
+  src: url("../../fonts/gmarketsans/GmarketSansBold.otf");
+  src: local(""),
+    url("../../fonts/gmarketsans/GmarketSansBold.otf") format("opentype");
+}
+
+/*
+  1. 한글폰트 쫘라락
+  
+  2. 영문폰트 쫘라락(유니코드도 같이 넣어줘야함)
+  
+  
+  */
