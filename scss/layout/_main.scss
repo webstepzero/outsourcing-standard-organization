@@ -64,7 +64,7 @@ body {
 .contents {
   display: flex;
   justify-content: space-between;
-  padding-top: 72px;
+  padding: 72px 0 24px;
   position: relative;
   z-index: 10;
 
@@ -181,14 +181,62 @@ body {
   }
   &.introduce {
     a {
-      background-color: #4b4b4b;
+      background: #4b4b4b url("../assets/image/ic_more.svg") 94% center
+        no-repeat;
     }
   }
 
   &.news {
     a {
-      background-color: rgba(136, 136, 136, 0.8);
+      background: rgba(136, 136, 136, 0.8)
+        url("../../assets/image/ic_insta.svg") 94% center no-repeat;
     }
+  }
+}
+
+.contents-news {
+  display: flex;
+  justify-content: flex-start;
+  padding-top: 32px;
+  .today {
+    display: flex;
+    &::after {
+      content: "";
+      display: block;
+      width: 1px;
+      height: 14px;
+      margin: 2px 15px;
+      background-color: #fff;
+    }
+  }
+  .day-issue {
+    width: 63.83%;
+    height: 1rem;
+    margin: 0;
+    .swiper-slide {
+      display: flex;
+      justify-content: space-between;
+      cursor: pointer;
+      user-select: none;
+    }
+  }
+
+  .pause {
+    margin: -3px 0 0 16px;
+  }
+
+  .pause-button {
+    width: 24px;
+    height: 24px;
+    border: 1px solid #ffffff;
+    border-radius: 4px;
+    color: transparent;
+    font-size: 1px;
+    overflow: hidden;
+    background: url("../../assets/image/ic_pause.png") center center/70%
+      no-repeat;
+
+    user-select: none;
   }
 }
 
@@ -297,3 +345,59 @@ body {
 }
 
 // footer
+.footer {
+  padding: 50px 0;
+}
+
+.organiztion-list {
+  display: flex;
+  gap: 24px;
+
+  padding-bottom: 24px;
+  border-bottom: 1px solid #c3c3c3;
+}
+
+.organiztion-item {
+  a {
+    letter-spacing: -0.32px;
+  }
+}
+
+.personal-information {
+  a {
+    color: #a0a01f;
+    font-weight: 700;
+  }
+}
+.clause {
+  a {
+    font-weight: 500;
+  }
+}
+
+.organization-area {
+  padding-top: 24px;
+  font-size: torem(14);
+  font-weight: 500;
+  color: #7a7a7c;
+
+  .area-list {
+    display: flex;
+  }
+
+  .address {
+    display: flex;
+    &::after {
+      content: "";
+      display: block;
+      margin: 0 8px;
+      width: 1px;
+      height: 14px;
+      background-color: #c6c6c7;
+    }
+  }
+
+  .copyright {
+    padding-top: 14px;
+  }
+}

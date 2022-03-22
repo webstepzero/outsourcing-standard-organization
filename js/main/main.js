@@ -42,6 +42,7 @@ const backgroundSwiper = new Swiper(".background-slide", {
       const happyClass = happy.className;
 
       slogan.classList.remove("active");
+
       if (happyClass.includes("active")) {
         happy.querySelector("img").src = filterPath("white", 1);
         youth.querySelector("img").src = filterPath("green", 2);
@@ -79,7 +80,28 @@ const backgroundSwiper = new Swiper(".background-slide", {
   },
 });
 
-console.log(window.innerWidth);
+const todayNews = new Swiper(".day-issue", {
+  direction: "vertical",
+  spaceBetween: 30,
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
+  loop: true,
+});
+
+const pauseButton = document.querySelector(".pause-button");
+
+const pause = (() => {
+  let status = false; //supressing the use of global variable.
+  return () => {
+    if (!status) todayNews.autoplay.stop();
+    else todayNews.autoplay.start();
+    status = !status;
+  };
+})();
+
+pauseButton.onclick = pause;
 
 if (window.innerWidth < 1280) {
   document.querySelector("div.wrap").remove();
